@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<div class="message bot-message card mb-3">
+    <div class="card-body">
+        <div class="message-content">
+            {{ bot_response_html | safe }}
+        </div>
+        <div class="sources-container mt-3">
+            <button class="btn btn-sm btn-outline-secondary" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#sources-{{ message_id }}"
+                    aria-expanded="false"
+                    aria-controls="sources-{{ message_id }}"
+                    id="explain-button-{{ message_id }}"
+                    data-predicted-data="{{ bot_response_html | safe }}">
+                Explain result
+            </button>
+            <div class="collapse mt-2" id="sources-{{ message_id }}">
+                <div class="card card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Explanation:</h6>
+                        <div class="message-content">
+                            {{ explain_result }}
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<script>-->
+<!--document.getElementById("explain-button-{{ message_id }}").addEventListener("click", function() {-->
+<!--    const predictedData = this.getAttribute("message-content");-->
+<!--    console.log(predictedData);-->
+<!--    // fetch("/explain", {-->
+<!--    //     method: "POST",-->
+<!--    //     headers: {-->
+<!--    //         "Content-Type": "application/x-www-form-urlencoded"-->
+<!--    //     },-->
+<!--    //     body: new URLSearchParams({-->
+<!--    //         "predicted_data": predictedData-->
+<!--    //     })-->
+<!--    // })-->
+<!--    // .then(response => response.json())-->
+<!--    // .then(data => {-->
+<!--    //     // Display the explanation in the collapse div-->
+<!--    //     document.getElementById("explanation-{{ message_id }}").innerText = data.explaination;-->
+<!--    // })-->
+<!--    // .catch(error => {-->
+<!--    //     console.error("Error:", error);-->
+<!--    // });-->
+<!--});-->
+<!--</script>-->
+</html>

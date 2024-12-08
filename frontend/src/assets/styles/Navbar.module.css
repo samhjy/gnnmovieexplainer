@@ -1,0 +1,100 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.headers{
+    flex: 1;
+    text-align: left;
+    font-size: 15px;
+}
+
+.menuButtons {
+    gap: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white; /* Adjust the color as needed */
+    border-radius: 30px; /* Adjust the radius as needed */
+    width: 568px;
+    height: 51.43px;
+    background-color: #F7F7F7;
+}
+
+.buttons {
+    width: 169px;
+    height: 41px;
+    font-size: 15.35px; /* Reduced font size */
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 33.77px;
+    background-color: #F7F7F7; /* Default state */
+    color: #8A8A8A;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons:hover {
+    background-color: #202020; /* Hover state */
+    color: white; /* Optional: Ensure text is readable */
+    font-weight: 600;
+}
+
+.buttons.active {
+    background-color: #202020; /* Active (click) state */
+    color: white;
+    font-weight: 600;
+}
+
+.menuSelect {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dropdownButton {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 0px;
+    width: 280px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.dropdownMenu {
+    position: absolute;
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-top: 6px solid #131619;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.dropdownItem {
+    padding: 13px 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.dropdownItem:hover {
+    background-color:  rgba(255, 255, 255, 0.1);
+}
+
